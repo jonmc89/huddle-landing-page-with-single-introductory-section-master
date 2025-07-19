@@ -1,0 +1,221 @@
+/* || Universal Styles  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Purple-700: #674bafff;
+  --Magenta-400: #e882e8ff;
+  --White: #fff;
+  --Black: #584586;
+  --Heading-Font: "Poppins", sans-serif, serif;
+  --Body-Font: "Open Sans", sans-serif, serif;
+  --Heading-Weight-1: 400;
+  --Heading-Weight-2: 600;
+  --Body-Weight: 400;
+}
+
+body {
+  background-color: var(--Purple-700);
+  width: 100%;
+  padding: 2em;
+  overflow-x: hidden;
+}
+
+/* ... */
+
+/* || Typography */
+
+h1 {
+  font-family: var(--Heading-Font);
+  font-weight: var(--Heading-Weight-2);
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  font-family: var(--Body-Font);
+  font-weight: var(--Body-Weight);
+  font-size: 1.2em;
+  line-height: 150%;
+}
+
+h1,
+p {
+  color: var(--White);
+  text-align: center;
+}
+
+/* ... */
+
+/* || Body */
+
+.bkg-image {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.bkg-image-desktop {
+  display: none;
+}
+
+.logo {
+  width: 10em;
+  height: auto;
+  margin-bottom: 4em;
+}
+
+/* ... */
+
+/* || Hero Container */
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 4em;
+}
+
+.hero-img {
+  width: 95%;
+  height: auto;
+}
+
+/* ... */
+
+/* || Text Container */
+
+.text-container {
+  margin-bottom: 2em;
+}
+
+/* ... */
+
+/* || Button Container */
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+button {
+  width: 11em;
+  height: 2em;
+  border-radius: 5em;
+  color: var(--Purple-700);
+  font-size: 1.1em;
+  box-shadow: 0.2em 0.2em 0.2em var(--Black);
+  border: none;
+  transition: all 0.12s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--Magenta-400);
+  color: var(--White);
+}
+
+/* ... */
+
+/* || Socials Container */
+
+.socials-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.fa-brands {
+  font-size: 1.2em;
+  color: var(--White);
+  border: 1px solid var(--White);
+  padding: 0.5em;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+}
+
+/* ... */
+
+/* || Desktop View */
+
+@media screen and (min-width: 90em) {
+  main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr;
+  }
+
+  body {
+    padding: 4em;
+  }
+
+  .logo {
+    width: 12em;
+    height: auto;
+  }
+
+  .bkg-image {
+    display: none;
+  }
+
+  .bkg-image-desktop {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+  }
+
+  .text-container,
+  .button-container,
+  .socials-container {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  h1,
+  p {
+    text-align: start;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .button-container {
+    justify-content: start;
+  }
+
+  button {
+    height: 2.5em;
+  }
+
+  .socials-container {
+    justify-content: end;
+    align-items: end;
+    position: absolute;
+    right: 2em;
+    bottom: 2em;
+  }
+
+  .fa-brands {
+    text-align: center;
+  }
+
+  .desktop-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+  }
+}
+
+/* ... */
